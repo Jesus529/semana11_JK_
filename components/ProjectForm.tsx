@@ -1,4 +1,4 @@
-
+﻿
 "use client"
 
 import { useState } from "react"
@@ -88,7 +88,7 @@ export function ProjectForm() {
             <DialogTitle>Crear Nuevo Proyecto</DialogTitle>
 
             <DialogDescription>
-              Completa la información del proyecto.
+              Completa la informaciÃ³n del proyecto.
               Haz clic en guardar cuando termines.
             </DialogDescription>
           </DialogHeader>
@@ -102,7 +102,7 @@ export function ProjectForm() {
 
               <Input
                 id="name"
-                placeholder="Mi Proyecto Increíble"
+                placeholder="Mi Proyecto IncreÃ­ble"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({
@@ -114,13 +114,13 @@ export function ProjectForm() {
               />
             </div>
 
-            {/* Descripción */}
+            {/* DescripciÃ³n */}
             <div className="grid gap-2">
-              <Label htmlFor="description">Descripción</Label>
+              <Label htmlFor="description">DescripciÃ³n</Label>
 
               <Input
                 id="description"
-                placeholder="Breve descripción del proyecto..."
+                placeholder="Breve descripciÃ³n del proyecto..."
                 value={formData.description}
                 onChange={(e) =>
                   setFormData({
@@ -131,10 +131,10 @@ export function ProjectForm() {
               />
             </div>
 
-            {/* Categoría */}
+            {/* CategorÃ­a */}
             <div className="grid gap-2">
               <Label>
-                Categoría <span className="text-red-500">*</span>
+                CategorÃ­a <span className="text-red-500">*</span>
               </Label>
 
               <Select
@@ -142,18 +142,18 @@ export function ProjectForm() {
                 onValueChange={(value) =>
                   setFormData({
                     ...formData,
-                    category: value,
+                    category: value ?? "",
                   })
                 }
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Selecciona una categoría" />
+                  <SelectValue placeholder="Selecciona una categorÃ­a" />
                 </SelectTrigger>
 
                 <SelectContent>
                   <SelectItem value="web">Desarrollo Web</SelectItem>
                   <SelectItem value="mobile">Desarrollo Mobile</SelectItem>
-                  <SelectItem value="design">Diseño</SelectItem>
+                  <SelectItem value="design">DiseÃ±o</SelectItem>
                   <SelectItem value="marketing">Marketing</SelectItem>
                   <SelectItem value="other">Otro</SelectItem>
                 </SelectContent>
@@ -171,7 +171,7 @@ export function ProjectForm() {
                 onValueChange={(value) =>
                   setFormData({
                     ...formData,
-                    priority: value,
+                    priority: value ?? "",
                   })
                 }
               >
@@ -207,3 +207,4 @@ export function ProjectForm() {
     </Dialog>
   )
 }
+
